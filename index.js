@@ -9,7 +9,7 @@ class Human {
     this.weight = weight;
   }
 
-  hablar() {
+  speak() {
     console.log(`hello i'm ${this.name}  my age is ${this.age} my weight is ${this.weight} kg \u{1F602}`);
   }
 }
@@ -20,4 +20,21 @@ class Person extends Human {
 }
 
 let persona_1 = new Person('ricardo', 31, 85);
-console.log(persona_1.hablar());
+console.log(persona_1.speak());
+
+
+class Animal {
+  constructor(name, age) {
+    this.name = name;
+    // operador logico || (o);
+    this.age = age || 0;
+  }
+
+  info() {
+    console.log(`the name is ${this.name} and the age is ${this.age}`);
+  }
+}
+
+// new instance of Animal class
+let animal_1 = new Animal('elefante');
+console.log(animal_1.info());
