@@ -38,3 +38,13 @@ class Animal {
 // new instance of Animal class
 let animal_1 = new Animal('elefante');
 console.log(animal_1.info());
+
+
+
+// operador logico or ||:
+let variable = '' || 'otro valor';
+/* console.log(variable); */
+variable = 'este valor';
+console.log(variable);
+
+
