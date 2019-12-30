@@ -48,3 +48,62 @@ variable = 'este valor';
 console.log(variable);
 
 
+class Auto {
+  constructor(peso, color, ruedas) {
+    this.peso = peso;
+    this.color = color || 'black';
+    this.ruedas = ruedas;
+  }
+
+  info() {
+    console.log(`el peso es ${this.peso}, de color ${this.color} tiene ${this.ruedas}`);
+  }
+}
+
+
+class Autito extends Auto {
+  constructor(peso, color, ruedas, marca) {
+    // super me permite llamar a los metodos y argumentos 
+    // de la clase padre
+    super(peso, color, ruedas);
+    this.marca = marca;
+  }
+
+  sayModel() {
+    console.log(`el modelo ${this.marca} el peso es ${this.peso}, de color ${this.color} tiene ${this.ruedas}`);
+  }
+
+  // segun documentacion para acceder al metodo del padre 
+  // super debe ir dentro del metodo de subclase.
+  call() {
+    super.info;
+  }
+}
+
+
+let auto_1 = new Autito(2000, 4, 'hyundai');
+console.log(auto_1.sayModel());
+
+// aqui se ve como super me permite llamar al metodo del padre.
+console.log(auto_1.info());
+
+
+// SUPER me permite acceder y llamar a los metodos y argumentos
+// de la clase padre en la subclase que hereda sus atributos
+// super().metodo
+
+
+//FALTA OTRO EJEMPLO CON SUPER PARA APRENDERLO BIEN!!!!
+
+// HACER EJERCICIO DE JS BUSCANDO LAS LETRAS MAYUSCULAS A PALABRAS
+
+// HACER OTRO EJERCICIO DE JS CAMBIANDO UN NUMERO A PRECIO CHILENO! 
+
+// AMBOS EJEMPLOS USANDO FUNCIONES PARA ELLO CON NOMBRES APROPIADOS
+
+// EJERCICIO QUE RECOGE UN NUMERO DEL ARRAY Y PASA POR UN CONDICIONAL SWITCH
+
+// CREAR OBJETOS, PASAR ATR DE UN OBJETO, USAR FREEZE, RECORRER CON VALUES O KEYS
+
+
+
