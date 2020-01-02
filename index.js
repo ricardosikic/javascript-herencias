@@ -95,6 +95,51 @@ console.log(auto_1.info());
 
 //FALTA OTRO EJEMPLO CON SUPER PARA APRENDERLO BIEN!!!!
 
+class Computador {
+  constructor(procesador, ram, disco_duro){
+    this.procesador = 'Intel';
+    this.ram = '16gb';
+    this.disco_duro = 'ssd';
+    this.encendido = false;
+  }
+
+  encender() {
+    this.encendido = true;
+    console.log(`Welcome back...`);
+    return this;
+  }
+
+  apagar() {
+    console.log(`See you...`);
+    this.encendido = false;
+    return this;
+  }
+}
+
+
+
+class Notebook extends Computador {
+  constructor(sistema_operativo, ...args) {
+    super(...args);
+    this.sistema_operativo = this.sistema_operativo || 'linux';
+  }
+
+  on() {
+    setTimeout(() => {
+      console.log(`welcome back, sistema operativo ${this.sistema_operativo}, ${this.ram} disco duro ${this.disco_duro}`);
+    }, 5000);
+  }
+
+  off() {
+    super.apagar;
+  }
+}
+
+notebook_1 = new Notebook();
+notebook_1.on();
+
+
+
 // HACER EJERCICIO DE JS BUSCANDO LAS LETRAS MAYUSCULAS A PALABRAS
 
 // HACER OTRO EJERCICIO DE JS CAMBIANDO UN NUMERO A PRECIO CHILENO! 
@@ -106,4 +151,4 @@ console.log(auto_1.info());
 // CREAR OBJETOS, PASAR ATR DE UN OBJETO, USAR FREEZE, RECORRER CON VALUES O KEYS
 
 
-
+// hacer un ejemplo con operadores or/ternarios/&& en las variables.
